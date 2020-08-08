@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const posts = [{
   id: 2,
-  text: 'Lorem ipsum',
+  text: 'Good Boy',
   user: {
     avatar: '/uploads/avatar1.png',
     username: 'Good Boy'
@@ -12,7 +12,7 @@ const posts = [{
 },
 {
   id: 1,
-  text: 'Lorem ipsum',
+  text: 'Good Girl',
   user: {
     avatar: '/uploads/avatar2.png',
     username: 'Good Girl'
@@ -34,7 +34,7 @@ export default class App extends Component {
       text: this.state.postContent,
       user: {
         avatar: '/uploads/avatar1.png',
-        username: 'Boy'
+        username: 'Good-Boy'
       }
     };
     this.setState((prevState) => ({
@@ -51,13 +51,13 @@ export default class App extends Component {
               <meta name="description" content="Newsfeed of all your friends on Graphbook" />
           </Helmet>
         <div className="postForm">
-          <form onSubmit={this.handleSubmit}>                      
+          <form onSubmit={this.handleSubmit}>
           <textarea value={postContent} onChange={this.handlePostContentChange} placeholder="Write your custom post!"/>
           <input type="submit" value="Submit" />
           </form>
         </div>
         <div className="feed">
-          {posts.map((post, i) => 
+          {posts.map((post, i) =>
             <div key={post.id} className="post">
               <div className="header">
                 <img src={post.user.avatar} />
