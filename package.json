@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "webpack-dev-server --devtool inline-source-map --hot --config webpack.client.config.js",
+
     "client:build": "webpack --config webpack.client.build.config.js"
+
   },
   "author": "vaibhavjain",
   "license": "Apache-2.0",
